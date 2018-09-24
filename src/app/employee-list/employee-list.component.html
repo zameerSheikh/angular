@@ -1,3 +1,4 @@
+<emp-count [all]="getTotalEmpCount()" [male]="getTotalMaleEmpCount()" [female]="getTotalFemaleEmpCount()"></emp-count><br><br>
 <table>
   <thead>
     <tr>
@@ -6,23 +7,15 @@
       <th>Gender</th>
       <th>DOB</th>
       <th>Salary</th>
-      <th>isFirst</th>
-      <th>isLast</th>
-      <th>isEven</th>
-      <th>isOdd</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let employee of employees; trackBy: trackByEmpCode; let isFirst = first; let isLast = last; let isEven = even; let isOdd = odd">
+    <tr *ngFor="let employee of employees">
       <td>{{employee.code | uppercase}}</td>
       <td>{{employee.name | employeeTitle: employee.gender}}</td>
       <td>{{employee.gender}}</td>
       <td>{{employee.dob | date: 'longDate' | uppercase}}</td>
       <td>{{employee.salary | currency: 'INR': 'symbol': '1.2-2'}}</td>
-      <td>{{isFirst}}</td>
-      <td>{{isLast}}</td>
-      <td>{{isEven}}</td>
-      <td>{{isOdd}}</td>
     </tr>
     <tr *ngIf="!employees || employees.length == 0">
       <td colspan="4">No employees to display.</td>
@@ -30,4 +23,3 @@
   </tbody>
 </table>
 <br>
-<button (click)="getEmployees()">Get Employees</button>
