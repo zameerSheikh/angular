@@ -3,6 +3,10 @@
     <app-employee></app-employee>
     <br><br>
     <emp-list></emp-list>
+    <br>
+    <span>You Entered: <input type="text" [(ngModel)]="userText"/></span>
+    <br><br>
+    <app-simple [simpleInput]="userText"></app-simple>
 </div>
 
 
