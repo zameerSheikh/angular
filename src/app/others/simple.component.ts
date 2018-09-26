@@ -12,9 +12,9 @@ export class SimpleComponent implements OnChanges{
     ngOnChanges(changes: SimpleChanges) {
         for(let propertyName in changes){
             let change = changes[propertyName];
-            let current = JSON.stringify(changes.currentValue);
-            let previous = JSON.stringify(changes.previousValue);
-            console.log(propertyName + 'current value =' + current + ', previous value: ' + previous);
+            let current = JSON.stringify(change.currentValue);
+            let previous = JSON.stringify(change.previousValue);
+            console.log(propertyName + '- current value:' + current + ', previous value: ' + previous);
         }
     };
 }

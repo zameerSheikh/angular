@@ -12,7 +12,7 @@ export class Employee implements IEmployee {
     
     // to implement the interface we need to add all the properties in the class as well, however typescript provides 
     // a short hand by writing the properties as parameters in the constructor function.
-    constructor(public code:string, public name:string, public gender:string, public salary:number, public  dob:string;) {
+    constructor(public code:string, public name:string, public gender:string, public salary:number, public dob:string) {
 
     }
 
