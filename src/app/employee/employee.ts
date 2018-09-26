@@ -5,7 +5,7 @@ export interface IEmployee {
     salary: number;
     dob: string;
     department?: string; // optoinal 
-    computeMonthlySalary(annualSalary: number): number;
+    //computeMonthlySalary(annualSalary: number): number;
 }
 
 export class Employee implements IEmployee {
@@ -16,7 +16,7 @@ export class Employee implements IEmployee {
 
     }
 
-    computeMonthlySalary(annualSalary: number): number {
-        return annualSalary / 12;
-    }
+    // computeMonthlySalary(annualSalary: number): number {
+    //     return annualSalary / 12;
+    // }
 }
