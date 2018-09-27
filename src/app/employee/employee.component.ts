@@ -1,14 +1,29 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { EmployeeService } from '../employee/employee.service';
+import { IEmployee } from "../employee/employee";
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html'
 })
 
-export class EmployeeComponent {
-  firstName: string = 'Tony';
-  lastName: string = 'Aliciea';
-  gender: string = 'male';
-  age: number = 31;
-  name: string = 'Tony Aliciea';
+export class EmployeeComponent implements OnInit{
+
+  employee: IEmployee;
+  name:string = 'Addy';
+
+  empDetails;
+
+  constructor(private _employeeService: EmployeeService, private _activatedRoute: ActivatedRoute){
+
+  }
+
+  ngOnInit(){
+    let empCode:string = this._activatedRoute.snapshot.params['code'];
+
+    this.empDetails = this._employeeService.getEmployeeDetails(empCode);
+    //this.employee = this._employeeService.getEmployeeDetails(2);
+  }
 }
+
