@@ -2,6 +2,10 @@ import { Component, OnInit } from "@angular/core";
 import { EmployeeService } from '../employee/employee.service';
 import { IEmployee } from "../employee/employee";
 import { ActivatedRoute, Router} from '@angular/router';
+// import 'rxjs/add/operator/retry';
+// import 'rxjs/add/operator/repeatWhen';
+// import 'rxjs/add/operator/delay';
+// import 'rxjs/add/operator/scan';
 
 @Component({
   selector: 'app-employee',
