@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { IEmployee } from "../employee/employee";
 import { EmployeeService } from '../employee/employee.service';
+import { PreferenceService } from '../preference.service';
 
 @Component({
   selector: 'emp-list',
@@ -13,12 +14,20 @@ export class EmployeeListComponent implements OnInit{
 
   selectedEmployeeCountRadioButton: string = 'all';
 
-  constructor(private _employeeService: EmployeeService){
+  constructor(private _employeeService: EmployeeService, private _preference: PreferenceService){
 
   }
 
   ngOnInit(){
     this.employees = this._employeeService.getEmployees();
+  }
+
+  get color(): string{
+      return this._preference.color;
+  }
+
+  set color(value: string){
+      this._preference.color = value;
   }
 
   

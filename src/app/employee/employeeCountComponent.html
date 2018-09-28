@@ -1,11 +1,14 @@
+<br>
 <span>Show : </span>
+<span>
+    <div class="radio-inline">
+        <label><input type="radio" name="options" value="all" [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChange()"/>{{"All(" + all + ")"}}</label>
+      </div>
+      <div class="radio-inline">
+        <label><input type="radio" name="options" value="male" [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChange()"/>{{"Male(" + male + ")"}}</label>
+      </div>
+      <div class="radio-inline">
+        <label><input type="radio" name="options" value="female" [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChange()"/>{{"Female(" + female + ")"}}</label>
+      </div>
+</span>
 
-<input type="radio" name="options" value="all" [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChange()"/>
-<span>{{"All(" + all + ")"}}</span>
-
-<input type="radio" name="options" value="male" [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChange()"/>
-<span>{{"Male(" + male + ")"}}</span>
-
-
-<input type="radio" name="options" value="female" [(ngModel)]="selectedRadioButtonValue" (change)="onRadioButtonSelectionChange()"/>
-<span>{{"Female(" + female + ")"}}</span>

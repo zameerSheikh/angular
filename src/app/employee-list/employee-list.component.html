@@ -3,7 +3,7 @@
  [female]="getTotalFemaleEmpCount()"
   (countRadioButtonSelectionChanged)="onEmployeeCountRadioButtonChanged($event)">
 </emp-count><br><br>
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Code</th>
@@ -29,3 +29,7 @@
   </tbody>
 </table>
 <br>
+
+<div>
+  Preferred colour: <input type="text" [(ngModel)]="color" [style.background]="color"/>
+  </div>

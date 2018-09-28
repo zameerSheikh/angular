@@ -1,18 +1,24 @@
 <h3>Employee details:</h3>
-<table style="border: 1px solid black">
-  <tr>
-    <td>Name</td>
-    <td>Gender</td>
-    <td>Salary</td>
-  </tr>
-  <tr>
-    <td>{{empDetails.name}}</td>
-    <td>{{empDetails.gender}}</td>
-    <td>{{empDetails.salary}}</td>
-  </tr>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <td>Name</td>
+      <td>Gender</td>
+      <td>Salary</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{empDetails.name}}</td>
+      <td>{{empDetails.gender}}</td>
+      <td>{{empDetails.salary}}</td>
+    </tr>
+  </tbody>
 </table>
 <!-- <input type="text" [(ngModel)]="name">
 {{name}} -->
+<br>
+<input type="button" class="btn btn-primary" value="Back to Employees" (click)="onBackbtnClick()"/>
 <br><br>
 
 

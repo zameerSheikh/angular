@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { EmployeeService } from '../employee/employee.service';
 import { IEmployee } from "../employee/employee";
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-employee',
@@ -15,10 +15,15 @@ export class EmployeeComponent implements OnInit{
 
   empDetails;
 
-  constructor(private _employeeService: EmployeeService, private _activatedRoute: ActivatedRoute){
+  constructor(private _employeeService: EmployeeService, 
+            private _activatedRoute: ActivatedRoute, 
+            private _router: Router){
 
   }
 
+  onBackbtnClick():void {
+    this._router.navigate(['/employees'])
+  }
   ngOnInit(){
     let empCode:string = this._activatedRoute.snapshot.params['code'];
 

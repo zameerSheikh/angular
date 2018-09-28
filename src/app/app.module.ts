@@ -14,6 +14,8 @@ import { PageNotFoundComponent } from './others/pageNotFound.compoent';
 import { HomeComponent } from './home/home.component';
 
 import { EmployeeService } from './employee/employee.service'; 
+import { PreferenceService } from './preference.service';
+import { TestModule } from './test.module';
 
 const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -38,6 +40,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    TestModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [EmployeeService],
